@@ -16,15 +16,15 @@ Implementation of paper - [Run efficiently:An Image-Adaptive Lightweight Detecto
 
 MS COCO
 
-| Model | Test Size | AP<sup>test</sup> | AP<sub>50</sub><sup>test</sup> | AP<sub>75</sub><sup>test</sup> | batch 1 fps | batch 32 average time |
+| Model | Test Size | AP<sup>test</sup> | AP<sub>50</sub><sup>test</sup> | <sup>test</sup> | batch 1 fps | batch 32 average time |
 | :-- | :-: | :-: | :-: | :-: | :-: | :-: |
-| [**YOLOv5-N**] | 640 | **51.4%** | **69.7%** | **55.9%** | 161 *fps* | 2.8 *ms* |
+| [**YOLOv5-N**] | 640 | **45.7%** | **69.7%** | **55.9%** | 161 *fps* | 2.8 *ms* |
 | [**YOLOv7-Tiny**] | 640 | **53.1%** | **71.2%** | **57.8%** | 114 *fps* | 4.3 *ms* |
 |  |  |  |  |  |  |  |
-| [**YOLOv7-W6**]| 1280 | **54.9%** | **72.6%** | **60.1%** | 84 *fps* | 7.6 *ms* |
-| [**YOLOv7-E6**] | 1280 | **56.0%** | **73.5%** | **61.2%** | 56 *fps* | 12.3 *ms* |
-| [**YOLOv7-D6**] | 1280 | **56.6%** | **74.0%** | **61.8%** | 44 *fps* | 15.0 *ms* |
-| [**YOLOv7-E6E**] | 1280 | **56.8%** | **74.4%** | **62.1%** | 36 *fps* | 18.7 *ms* |
+| [**YOLOv8-N**]| 640 | **54.9%** | **72.6%** | **60.1%** | 84 *fps* | 7.6 *ms* |
+| [**Gold-YOLO-N**] | 640 | **56.0%** | **73.5%** | **61.2%** | 56 *fps* | 12.3 *ms* |
+| [**YOLOv9-T**] | 640 | **56.6%** | **74.0%** | **61.8%** | 44 *fps* | 15.0 *ms* |
+| [**ALN-YOLOs**] | 640 | **56.8%** | **74.4%** | **62.1%** | 36 *fps* | 18.7 *ms* |
 
 
 
