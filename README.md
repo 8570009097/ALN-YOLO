@@ -16,7 +16,7 @@ Implementation of paper - [Run efficiently:An Image-Adaptive Lightweight Detecto
 
 MS COCO
 
-| Model | Test Size | AP<sup>test</sup> | AP<sub>50</sub><sup>test</sup> || batch 1 fps | batch 32 average time |
+| Model | Test Size | AP<sup>test</sup> | AP<sub>50</sub><sup>test</sup> |Params | FLPOs | batch 32 average time |
 | :-- | :-: | :-: | :-: | :-: | :-: | :-: |
 | [**YOLOv5-N**] | 640 | **45.7%** | **69.7%** |  | 161 *fps* | 2.8 *ms* |
 | [**YOLOv7-Tiny**] | 640 | **53.1%** | **71.2%** | **57.8%** | 114 *fps* | 4.3 *ms* |
