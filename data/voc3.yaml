@@ -1,0 +1,5 @@
+train: C:/VOC2007/VOCdevkit/images/train  # 16551 images
+val: C:/VOC2007/VOCdevkit/images/val # 4952 images
+test: C:/VOC2007/VOCdevkit/images/test # 4952 images
+nc: 20
+names: ['aeroplane','bicycle','bird','boat','bottle','bus','car','cat','chair','cow','diningtable','dog','horse','motorbike','person','pottedplant','sheep','sofa','train','tvmonitor']

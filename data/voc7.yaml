@@ -1,0 +1,8 @@
+train: C:\SafetyHelmetWearingDataset\VOCdevkit\images/train  # 16551 images
+val: C:\SafetyHelmetWearingDataset\VOCdevkit\images/val # 4952 images
+test: C:\SafetyHelmetWearingDataset\VOCdevkit\images/val # 4952 images
+#train: r'\\10.2.2.46\fileserver\IT部门文件夹\张海镔\AI算法\WIDER_VOC2007\VOCdevkit\images\train'  # 16551 images
+#val: r'\\10.2.2.46\fileserver\IT部门文件夹\张海镔\AI算法\WIDER_VOC2007\VOCdevkit\images\val' # 4952 images
+
+nc: 6
+names: ['helmet','head_with_helmet','person_with_helmet','head','person_no_helmet','face']

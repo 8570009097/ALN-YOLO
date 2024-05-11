@@ -1,0 +1,6 @@
+train: C:\test\images/train  # 16551 images
+val: C:\test\images/val # 4952 images
+test: C:\test\images/val # 4952 images
+
+nc: 1
+names: ['person']
