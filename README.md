@@ -63,5 +63,6 @@ You will get the results:
  mAP@.5 = 0.562
  mAP@.5:.95: 100% = 0.345
  Speed = 0.9ms
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.68772
+ Model = 5693858
+ GFLOPs=12.5
 ```
