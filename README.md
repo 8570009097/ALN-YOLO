@@ -10,7 +10,8 @@ Implementation of paper - [Run efficiently:An Image-Adaptive Lightweight Detecto
         <img src="https://github.com/8570009097/ALN-YOLO/blob/main/ALN-YOLO.png" width="79%"/>
     </a>
 </div>
-![Alt Text](https://github.com/8570009097/ALN-YOLO/blob/main/ALN-YOLO.png)
+
+![Alt Text](ALN-YOLO.png)
 
 
 ## Performance 
