@@ -11,7 +11,6 @@ Implementation of paper - [Run efficiently:An Image-Adaptive Lightweight Detecto
     </a>
 </div>
 
-![Alt Text](ALN-YOLO.png)
 
 
 ## Performance 
