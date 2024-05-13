@@ -62,7 +62,7 @@ You will get the results:
  P = 0.646
  R = 0.526
  mAP@.5 = 0.562
- mAP@.5:.95: 100% = 0.345
+ mAP@.5:.95: 100% = 0.378
  Speed = 0.9ms
  Model = 5693858
  GFLOPs=12.5
