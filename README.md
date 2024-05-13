@@ -7,7 +7,7 @@ Implementation of paper - [Run efficiently:An Image-Adaptive Lightweight Detecto
 
 <div align="center">
     <a href="./">
-        <img src="./ALN-YOLO.png" width="79%"/>
+        <img src="./ALN-YOLO.jpg" width="79%"/>
     </a>
 </div>
 
