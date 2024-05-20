@@ -2833,12 +2833,6 @@ class VoVPDCSP(nn.Module):
         y = self.cv2(x)
         return self.cv3(torch.cat((y, x1), dim=1))
 
-class VoVGSCSPC(VoVGSCSP):
-    # cheap VoVGSCSP module with GSBottleneck
-    def __init__(self, c1, c2, n=1, shortcut=True, g=1, e=0.5):
-        super().__init__(c1, c2)
-        c_ = int(c2 * 0.5)  # hidden channels
-        self.gsb = GSBottleneckC(c_, c_, 1, 1)
 
 
 class Concat_ATT(nn.Module):
