@@ -2816,27 +2816,6 @@ class PDBottleneck(nn.Module):
         return self.conv_lighting(x) + self.shortcut(x)
 
 
-class GSBottleneckC(GSBottleneck):
-    # cheap GS Bottleneck https://github.com/AlanLi1997/slim-neck-by-gsconv
-    def __init__(self, c1, c2, k=3, s=1):
-        super().__init__(c1, c2, k, s)
-        self.shortcut = DWConv(c1, c2, k, s, act=False)
-
-class VoVGSCSP(nn.Module):
-    # VoVGSCSP module with GSBottleneck
-    def __init__(self, c1, c2, n=1, shortcut=True, g=1, e=0.5):
-        super().__init__()
-        c_ = int(c2 * e)  # hidden channels
-        self.cv1 = Conv(c1, c_, 1, 1)
-        self.cv2 = Conv(c1, c_, 1, 1)
-        self.gsb = nn.Sequential(*(GSBottleneck(c_, c_, e=1.0) for _ in range(n)))
-        self.res = Conv(c_, c_, 3, 1, act=False)
-        self.cv3 = Conv(2 * c_, c2, 1)  #
-
-    def forward(self, x):
-        x1 = self.gsb(self.cv1(x))
-        y = self.cv2(x)
-        return self.cv3(torch.cat((y, x1), dim=1))
 
 class VoVPDCSP(nn.Module):
     # VoVPDCSP module with PDBottleneck
@@ -2860,33 +2839,6 @@ class VoVGSCSPC(VoVGSCSP):
         super().__init__(c1, c2)
         c_ = int(c2 * 0.5)  # hidden channels
         self.gsb = GSBottleneckC(c_, c_, 1, 1)
-
-#--------------------------------------------------------------------
-
-class SPPCSPC_ATT(nn.Module):
-    # CSP https://github.com/WongKinYiu/CrossStagePartialNetworks
-    def __init__(self, c1, c2, n=1, shortcut=False, g=1, e=0.5, k=(5, 9, 13)):
-        super(SPPCSPC_ATT, self).__init__()
-        c_ = int(2 * c2 * e)  # hidden channels
-        self.cv1 = Conv(c1, c_, 1, 1)
-        self.cv2 = Conv(c1, c_, 1, 1)
-        self.cv3 = Conv(c_, c_, 3, 1)
-        self.cv4 = Conv(c_, c_, 1, 1)
-        self.m = nn.ModuleList([nn.MaxPool2d(kernel_size=x, stride=1, padding=x // 2) for x in k])
-        self.cv5 = Conv(4 * c_, c_, 1, 1)
-        self.cv6 = Conv(c_, c_, 3, 1)
-        self.cv7 = Conv(2 * c_, c2, 1, 1)
-
-        self.att = SimAM()
-
-    def forward(self, x):
-        x1 = self.cv4(self.cv3(self.cv1(x)))
-        y1 = self.cv6(self.cv5(torch.cat([x1] + [m(x1) for m in self.m], 1)))
-        y2 = self.cv2(x)
-        return self.att(self.cv7(torch.cat((y1, y2), dim=1)))
-
-#----------------------------------------------------------
-
 
 
 class Concat_ATT(nn.Module):
