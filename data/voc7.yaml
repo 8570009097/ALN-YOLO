@@ -1,6 +1,0 @@
-train: C:\SafetyHelmetWearingDataset\VOCdevkit\images/train  # 16551 images
-val: C:\SafetyHelmetWearingDataset\VOCdevkit\images/val # 4952 images
-test: C:\SafetyHelmetWearingDataset\VOCdevkit\images/val # 4952 images
-
-nc: 6
-names: ['helmet','head_with_helmet','person_with_helmet','head','person_no_helmet','face']
