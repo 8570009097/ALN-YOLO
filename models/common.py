@@ -3649,27 +3649,3 @@ class DSC(object):
         return deformed_feature
 
 
-# Code for testing the DSConv
-# if __name__ == '__main__':
-#     os.environ["CUDA_VISIBLE_DEVICES"] = '0'
-#     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-#     A = np.random.rand(4, 5, 6, 7)
-#     # A = np.ones(shape=(3, 2, 2, 3), dtype=np.float32)
-#     # print(A)
-#     A = A.astype(dtype=np.float32)
-#     A = torch.from_numpy(A)
-#     # print(A.shape)
-#     conv0 = DSConv(
-#         in_ch=5,
-#         out_ch=10,
-#         kernel_size=15,
-#         extend_scope=1,
-#         morph=0,
-#         if_offset=True,
-#         device=device)
-#     if torch.cuda.is_available():
-#         A = A.to(device)
-#         conv0 = conv0.to(device)
-#     out = conv0(A)
-#     print(out.shape)
-#     print(out)
