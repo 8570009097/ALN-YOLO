@@ -1,9 +1,0 @@
-train: D:/BaiduNetdiskDownload/v8/ultralytics-main/datasets/VOCdevkit/images/train  # 16551 images
-val: D:/BaiduNetdiskDownload/v8/ultralytics-main/datasets/VOCdevkit/images/val # 4952 images
-test: D:/BaiduNetdiskDownload/v8/ultralytics-main/datasets/VOCdevkit/images/test # 4952 images
-
-nc: 4
-names: ['qianfen','bashoushang','bashouxia', 'youxiangmen']
-#nc: 1
-#names: ['qianfen']
-
