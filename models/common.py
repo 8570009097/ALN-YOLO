@@ -142,7 +142,7 @@ class RobustConv2(nn.Module):
         if self.gamma is not None:
             x = x.mul(self.gamma.reshape(1, -1, 1, 1)) 
         return x
-    
+
 
 def DWConv(c1, c2, k=1, s=1, act=True):
     # Depthwise convolution
