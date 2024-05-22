@@ -523,13 +523,6 @@ def train(hyp, opt, device, tb_writer=None):
     torch.cuda.empty_cache()
     return results
 
-
-#
-#早上 上ceshi6_成品测试
-#voc   our
-# 安全帽our
-#头和安全帽 our 350
-#人脸 -350t  #人群减纸
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--weights', type=str, default=' ', help='initial weights path')
